@@ -1,0 +1,91 @@
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Собаки" > Домашние_животные
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Кошки" >> Домашние_животные
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Хомяки" >> Домашние_животные
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Лошади" > Вьючные_животные
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Верблюды" >> Вьючные_животные
+student@Ubuntu-MySQL-VirtualBox:~$ echo "Ослы" >> Вьючные_животные
+student@Ubuntu-MySQL-VirtualBox:~$ cat Домашние_животные Вьючные_животные > Животные_друзья_человека
+student@Ubuntu-MySQL-VirtualBox:~$ cat Животные_друзья_человека
+Собаки
+Кошки
+Хомяки
+Лошади
+Верблюды
+Ослы
+student@Ubuntu-MySQL-VirtualBox:~$ mv Животные_друзья_человека Друзья_человека
+student@Ubuntu-MySQL-VirtualBox:~$ mkdir Животные
+student@Ubuntu-MySQL-VirtualBox:~$ mv Друзья_человека Животные/
+
+----------------------------------------------------
+----------------------------------------------------
+----------------------------------------------------
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install software-properties-common
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет software-properties-common самой новой версии (0.96.20.10).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 5 пакетов не обновлено.
+student@Ubuntu-MySQL-VirtualBox:~$ sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu bionic universe'
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu xenial InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu xenial-updates InRelease             
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu xenial-backports InRelease           
+Пол:4 http://archive.ubuntu.com/ubuntu bionic InRelease [242 kB]               
+Сущ:5 http://ppa.launchpad.net/linuxuprising/java/ubuntu xenial InRelease      
+Сущ:6 http://security.ubuntu.com/ubuntu xenial-security InRelease              
+Сущ:7 http://ppa.launchpad.net/webupd8team/java/ubuntu xenial InRelease        
+Сущ:8 https://download.docker.com/linux/ubuntu xenial InRelease                
+Пол:9 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8 570 kB]
+Пол:10 http://archive.ubuntu.com/ubuntu bionic/universe i386 Packages [8 531 kB]
+Сущ:11 https://dbeaver.io/debs/dbeaver-ce  InRelease             
+Пол:12 http://archive.ubuntu.com/ubuntu bionic/universe Translation-ru [1 231 kB]
+Пол:13 http://archive.ubuntu.com/ubuntu bionic/universe Translation-en [4 941 kB]
+Пол:14 http://archive.ubuntu.com/ubuntu bionic/universe amd64 DEP-11 Metadata [3 287 kB]
+Пол:15 http://archive.ubuntu.com/ubuntu bionic/universe DEP-11 64x64 Icons [8 420 kB]
+Получено 35,2 MB за 5с (6 561 kB/s)                                       
+
+(appstreamcli:7068): GLib-CRITICAL **: g_strchug: assertion 'string != NULL' failed
+
+(appstreamcli:7068): GLib-CRITICAL **: g_strchomp: assertion 'string != NULL' failed
+AppStream cache update completed, but some metadata was ignored due to errors.
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Может быть обновлено 346 пакетов. Запустите «apt list --upgradable» для их показа.
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+N: Пропускается получение настроенного файла «stable/binary-i386/Packages», так как репозиторий «https://download.docker.com/linux/ubuntu xenial InRelease» не поддерживает архитектуру «i386»
+W: Цель Packages (stable/binary-amd64/Packages) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Packages (stable/binary-all/Packages) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru_RU) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-ru) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель Translations (stable/i18n/Translation-en) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11 (stable/dep11/Components-amd64.yml) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+W: Цель DEP-11-icons (stable/dep11/icons-64x64.tar) настроена несколько раз: в /etc/apt/sources.list:52 и в /etc/apt/sources.list.d/docker.list:1
+student@Ubuntu-MySQL-VirtualBox:~$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет mysql-server самой новой версии (5.7.33-0ubuntu0.16.04.1).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 346 пакетов не обновлено.
+student@Ubuntu-MySQL-VirtualBox:~$ sudo systemctl status mysql
+● mysql.service - MySQL Community Server
+   Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: en
+   Active: active (running) since Вт 2024-04-02 16:37:41 MSK; 17min ago
+  Process: 1299 ExecStartPost=/usr/share/mysql/mysql-systemd-start post (code=ex
+  Process: 1080 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exit
+ Main PID: 1298 (mysqld)
+    Tasks: 28
+   Memory: 156.8M
+      CPU: 838ms
+   CGroup: /system.slice/mysql.service
+           └─1298 /usr/sbin/mysqld
+
+апр 02 16:37:39 Ubuntu-MySQL-VirtualBox systemd[1]: Starting MySQL Community Ser
+апр 02 16:37:41 Ubuntu-MySQL-VirtualBox systemd[1]: Started MySQL Community Serv
